@@ -1,0 +1,7 @@
+@import './mixins';
+@import './variables';
+@include resetStyle;
+
+article {
+    padding: $padding--carrousel--s;
+}

@@ -9,30 +9,31 @@
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
 </head>
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <?php
-                include './src/projects.php';
-                foreach ($PROJECTS as $project):
-            ?>
-            <div class="project-card swiper-slide">
-                <h3 class="project-name"><?php echo $project['name'] ?></h3>
-                <img class="project-image" src="<?php echo $project['image'] ?>" alt="<?php echo $project['name'] ?>">
-                <p class="project-price">
-                    <?php echo $project['price'] ?>
-                    <span class="project-price--span">€/mes²</span>
-                </p>
-                <button class="btn-project-info">Más información</button>
+    <article class="article">
+        <h2>Escoge tu proyecto ideal y fináncialo en cómodas cuotas² Diferentes importes, mismos servicios incluidos</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper project-carrousel">
+                <?php
+                    include './src/projects.php';
+                    foreach ($PROJECTS as $project):
+                ?>
+                <div class="project-card swiper-slide" style="height:320px">
+                    <img class="project-image" src="<?php echo $project['image'] ?>" alt="<?php echo $project['name'] ?>">
+                    <h3 class="project-name"><?php echo $project['name'] ?></h3>
+                    <p class="project-price">
+                        <?php echo $project['price'] ?>
+                        <span class="project-price--span">€/mes²</span>
+                    </p>
+                    <button class="btn-project-info">Más información</button>
+                </div>
+            
+            <?php endforeach; ?>
             </div>
-        
-        <?php endforeach; ?>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <div class="container">
+    </article>
 </div>
 
     <script src="node_modules/swiper/swiper-bundle.min.js"></script>
