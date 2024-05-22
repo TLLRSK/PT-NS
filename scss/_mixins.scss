@@ -1,0 +1,11 @@
+@import './variables';
+
+@mixin color($color-name) {
+    $color: map-get($colors, $color-name);
+
+    @if $color {
+        color: $color;
+    } @else {
+        @warn "Unknown color `#{$color-name}`.";
+    }
+}

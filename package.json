@@ -1,0 +1,17 @@
+{
+  "name": "northstudio-technical",
+  "description": "Requerimiento",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^11.1.3"
+  }
+}
