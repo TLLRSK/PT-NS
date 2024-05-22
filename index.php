@@ -37,7 +37,7 @@
     <script src="node_modules/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 10,
+            spaceBetween: 15,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
