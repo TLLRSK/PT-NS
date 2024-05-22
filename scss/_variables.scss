@@ -17,6 +17,28 @@ $padding--carrousel--m: 90px;
 $border-radius--s: 8px;
 
 // FONTS
-//weights
+//size
+$font--mob-xs: 14px;
+$font--mob-s: 18px;
+$font--mob-m: 20px;
+$font--mob-l: 22px;
+
+$font--deskt-xs: 11.26px;
+$font--deskt-s: 19.1px;
+$font--deskt-m: 22px;
+$font--deskt-l: 26px;
+$font--deskt-xl: 30px;
+$font--deskt-2xl: 30.03px;
+//weight
 $bold: 700;
 $semibold: 600;
+
+// Line height //
+$line-h--auto: auto;
+$line-h---xxs: 16.1px;
+$line-h--xs: 19.3px;
+$line-h--s: 21.8px;
+$line-h---m: 22.2px;
+$line-h---l: 24px;
+$line-h--xl: 30px;
+$line-h--xxl: 41px;

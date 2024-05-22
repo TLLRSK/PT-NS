@@ -6,11 +6,11 @@
     <title>Swiper Example</title>
     
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
 </head>
 <body>
     <article class="article">
-        <h2>Escoge tu proyecto ideal y fináncialo en cómodas cuotas² Diferentes importes, mismos servicios incluidos</h2>
+        <h2 class="article-header">Escoge tu proyecto ideal y fináncialo en cómodas cuotas² Diferentes importes, mismos servicios incluidos</h2>
         <div class="swiper-container">
             <div class="swiper-wrapper project-carrousel">
                 <?php
@@ -24,13 +24,11 @@
                         <?php echo $project['price'] ?>
                         <span class="project-price--span">€/mes²</span>
                     </p>
-                    <button class="btn-project-info">Más información</button>
+                    <button class="btn--project-info">Más info</button>
                 </div>
             
             <?php endforeach; ?>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
             <div class="swiper-pagination"></div>
         </div>
     </article>
@@ -39,10 +37,7 @@
     <script src="node_modules/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+            spaceBetween: 10,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,

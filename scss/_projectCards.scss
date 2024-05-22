@@ -1,8 +1,35 @@
 @import './variables';
 .project-card {
+    /* Overriding swiper style */
+    width: 100% !important;
+    height: 396px !important;
+    /*--------------------------*/
     background-color: $white--0;
-    width: 313px;
     outline: 1px solid $tertiary--40;
-    padding: 12.55px 13.30px;
+    padding: 12.55px 13.30px 0;
     border-radius: $border-radius--s;
+
+    .project {
+        &-image {
+            height: 239.86px;
+            margin-bottom: 13.59px;
+        }
+        &-name {
+            font-size: $font--mob-s;
+            line-height: 100%;
+            font-weight: $bold;
+            margin-bottom: 7.22px;
+        }
+        &-price {
+            font-size: $font--mob-m;
+            line-height: $line-h---m;
+            font-weight: $semibold;
+            margin-bottom: 13.78px;
+
+            &--span {
+                font-size: $font--mob-xs;
+                line-height: $line-h---xxs;
+            }
+        }
+    }
 }

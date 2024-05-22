@@ -120,47 +120,6 @@ Pre:
         y = 0;px;
         blur: 15px;
 
-    // TYPOS 
-
-    // Font family //
-    Montserrat
-
-    // Size //
-
-    * Mobile *
-    --xs: 14px;
-    --s: 18px;
-    --m: 20px;
-    --l: 22px;
-
-    * Desktop *
-    --xs: 11.26px;
-    --s: 19.1px;
-    --m: 22px;
-    --l: 26px
-    --xl: 30px;
-    --2xl: 30.03px;
-    // Weight
-
-    // Line height //
-
-    * Mobile *
-    --line-h-auto: auto;
-    --line-h--16: 16.1px;
-    --line-h--22: 22.2px;
-    --line-h--24: 24px;
-
-    * Desktop *
-    --line-h-auto: auto;
-    --line-h--19: 19.3px;
-    --line-h--21: 21.8px;
-    --line-h--30: 30px;
-    --line-h--41: 41px;
-
-    // Weight //
-    --semibold: 600;
-    --bold: 700;
-
 2. Crear componentes
     - Proyecto
         - Img
@@ -177,3 +136,11 @@ Pre:
         - Se muestra en fade-in
         - Desaparece con fade-out
     
+// Desarrollando //
+
+Swiper:
+- Librería instalada.
+- Creado loop para generar las tarjetas de proyecto como sliders.
+- Por falta de tiempo y desconocimiento de la librería, opto por overridear el estilo de swiper con !important.
+    *Sería conveniente depurar esto.
+

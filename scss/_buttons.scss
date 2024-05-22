@@ -1,0 +1,13 @@
+@import './variables';
+.btn {
+    &--project-info {
+        background-color: $ultramar--100;
+        padding: 8px 16px;
+        border-radius: $border-radius--s;
+        color: $white--100;
+        font-size: $font--mob-xs;
+        line-height: $line-h---l;
+        font-weight: $bold;
+        text-transform: uppercase;
+    }
+}
