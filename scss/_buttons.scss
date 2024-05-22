@@ -1,6 +1,6 @@
 @import './variables';
 .btn {
-    &--project-info {
+    &--project-info, &--buy {
         background-color: $ultramar--100;
         padding: 8px 16px;
         border-radius: $border-radius--s;
@@ -18,5 +18,8 @@
             line-height: $line-h--xs;
             margin-bottom: 29px;
         }
+    }
+    &--buy {
+        margin: 0 auto;
     }
 }

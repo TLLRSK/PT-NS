@@ -26,17 +26,20 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    z-index: 1;
+    // z-index: 1;
   }
-  .swiper-container {
+  .swiper {
     margin-left: auto;
     margin-right: auto;
     position: relative;
     list-style: none;
     padding: 0;
     /* Fix of Webkit flickering */
-    z-index: 1;
+    z-index: 0 !important;
     display: block;
+  }
+  .swiper-wrapper {
+    z-index: 0 !important;
   }
   .swiper-pagination {
     position:initial !important;
