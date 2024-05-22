@@ -18,13 +18,17 @@
                     foreach ($PROJECTS as $project):
                 ?>
                 <div class="project-card swiper-slide" style="height:320px">
-                    <img class="project-image" src="<?php echo $project['image'] ?>" alt="<?php echo $project['name'] ?>">
-                    <h3 class="project-name"><?php echo $project['name'] ?></h3>
-                    <p class="project-price">
-                        <?php echo $project['price'] ?>
-                        <span class="project-price--span">€/mes²</span>
-                    </p>
-                    <button class="btn--project-info">Más info</button>
+                    <div class="project-image-container">
+                        <img class="project-image" src="<?php echo $project['image'] ?>" alt="<?php echo $project['name'] ?>">
+                    </div>
+                    <div class="project-info-container">
+                        <h3 class="project-name"><?php echo $project['name'] ?></h3>
+                        <p class="project-price">
+                            <?php echo $project['price'] ?>
+                            <span class="project-price--span">€/mes²</span>
+                        </p>
+                        <button class="btn--project-info">Más info</button>
+                    </div>
                 </div>
             
             <?php endforeach; ?>

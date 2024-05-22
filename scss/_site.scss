@@ -1,8 +1,12 @@
 @import './mixins';
 @import './variables';
 @include resetStyle;
-
+body {
+    min-height: 100dvh;
+}
 article {
+    height: 100dvh;
+    min-height: 100%;
     padding: $padding--carrousel--s;
 
     h2 {
