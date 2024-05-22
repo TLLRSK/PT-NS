@@ -36,9 +36,15 @@
 @mixin mq-360 {
     @media all and (min-width: 360px) { @content; }
 }
+@mixin mq-480 {
+    @media all and (min-width: 480px) { @content; }
+}
 @mixin mq-720 {
     @media all and (min-width: 720px) { @content; }
 }
 @mixin mq-1024 {
     @media all and (min-width: 1024px) { @content; }
+}
+@mixin mq-1920 {
+    @media all and (min-width: 1920px) { @content; }
 }

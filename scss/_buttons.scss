@@ -9,5 +9,14 @@
         line-height: $line-h---l;
         font-weight: $bold;
         text-transform: uppercase;
+        margin-bottom: 24px;
+
+        @include mq-1920 {
+            width: 163.64px;
+            height: 45px;
+            font-size: $font--desk-xs;
+            line-height: $line-h--xs;
+            margin-bottom: 29px;
+        }
     }
 }

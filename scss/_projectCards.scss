@@ -3,7 +3,8 @@
 .project-card {
     /* Overriding swiper style */
     width: 100% !important;
-    height: 396px !important;
+    height: fit-content !important;
+    min-height: 313px !important;
     /*--------------------------*/
     background-color: $white--0;
     outline: 1px solid $tertiary--40;
@@ -14,33 +15,64 @@
     &.swiper-slide-active {
         @include shadows;
     }
+
+    @include mq-480 {
+        width: clamp(313px, 25vw, 418px) !important;
+    }
+    @include mq-1024 {
+        width: 428px;
+    }
+
     /* Card content */
     .project {
         &-image-container {
             padding: 12.55px 13.30px 0;
+            @include mq-1920 {
+                padding: 17px 17.74px 0;
+            }
         }
         &-image {
-            height: 239.86px;
+            height: auto;
             margin-bottom: 13.59px;
+            @include mq-1920 {
+                height: 325px;
+                margin-bottom: 18px;
+            }
         }
         &-info-container {
             padding: 0 19px;
+            @include mq-1920 {
+                padding: 0 25.99px;
+            }
         }
         &-name {
             font-size: $font--mob-s;
             line-height: 100%;
             font-weight: $bold;
             margin-bottom: 7.22px;
+             @include mq-1920 {
+                font-size: $font--desk-m;
+                line-height: $line-h--1;
+                margin-bottom: 13px;
+            }
         }
         &-price {
             font-size: $font--mob-m;
             line-height: $line-h---m;
             font-weight: $semibold;
             margin-bottom: 13.78px;
-
-            &--span {
-                font-size: $font--mob-xs;
-                line-height: $line-h---xxs;
+            @include mq-1920 {
+                font-size: $font--desk-2xl;
+                line-height: $line-h--xl;
+                margin-bottom: 16px;
+            }
+        }
+        &-price--s {
+            font-size: $font--mob-xs;
+            line-height: $line-h---xxs;
+            @include mq-1920 {
+                font-size: $font--desk-s;
+                line-height: $line-h--s;
             }
         }
     }

@@ -1,12 +1,34 @@
 @import './mixins';
 @import './variables';
 @include resetStyle;
-article {
+body {
+    background-color: $gray--0;
+}
+.article {
     height: 100dvh;
-    min-height: 100%;
+    background-color: $white--0;
     padding: $padding--article-s;
+    width: 100%;
+    overflow: hidden;
+    @include mq-720 {
+        
+        margin: auto;
+    }
+    @include mq-1024 {
+        width: 1440px;
+        padding: $padding--article-m;
+    }
 
-    h2 {
+    &-header {
         text-align: center;
+        font-size: $font--mob-s;
+        line-height: $line-h---l;
+        font-weight: $bold;
+
+        @include mq-1920 {
+            font-size: $font--desk-xl;
+            line-height: $line-h--xxl;
+            margin: 0 162px;
+        }
     }
 }

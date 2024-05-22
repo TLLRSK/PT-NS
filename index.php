@@ -16,6 +16,9 @@
                 <?php
                     include './src/projects.php';
                     foreach ($PROJECTS as $project):
+                        $price_parts = explode(',', $project['price']);
+                        $price_integer = $price_parts[0];
+                        $price_decimal = isset($price_parts[1]) ? ',' . $price_parts[1] : '';
                 ?>
                 <div class="project-card swiper-slide" style="height:320px">
                     <div class="project-image-container">
@@ -24,8 +27,8 @@
                     <div class="project-info-container">
                         <h3 class="project-name"><?php echo $project['name'] ?></h3>
                         <p class="project-price">
-                            <?php echo $project['price'] ?>
-                            <span class="project-price--span">€/mes²</span>
+                            <?php echo $price_integer ?><span class="project-price--s"><?php echo $price_decimal ?></span>
+                            <span class="project-price--s">€/mes²</span>
                         </p>
                         <button class="btn--project-info">Más info</button>
                     </div>
@@ -42,6 +45,11 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             spaceBetween: 15,
+            breakpoints: {
+                1024: {
+                    spaceBetween: 20,
+                },
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
