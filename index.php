@@ -42,7 +42,7 @@
             <div class="swiper-pagination"></div>
         </div>
 
-        <div class="modal hidden">
+        <div class="modal">
             <div class="modal-container">
                 <h3 class="modal-project-name">Project name</h3>
                 <svg class="modal-separator" width="100%" height="1">
@@ -55,7 +55,6 @@
 
     </article>
 </div>
-
     <script src="node_modules/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="./js/swiper.js"></script>
     <script>

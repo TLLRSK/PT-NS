@@ -2,58 +2,63 @@
 @import './variables';
 @import './mixins';
 .modal {
-        position: absolute;
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    inset: 0 0 0 0;
+    
+    &.fadeIn {
+        display: flex;
+        animation: fadeIn .55s ease-in-out;
+    }
+    &.fadeOut {
+        display: flex;
+        animation: fadeOut .55s ease-in-out;
+    }
+
+    &-container {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        inset: 0 0 0 0;
-        opacity: 0;
-       
-        &.visible {
-            opacity: 1;
+        width: 100%;
+        height: fit-content;
+        background-color: $white--0;
+        margin: 0 24px;
+        padding: 36px 0 22px 0;
+        border-radius: $border-radius--s;
+        @include mq-1920 {
+            width: 590px;
+            margin: auto;
+            padding: 50px 0 38px 0;
         }
-
-        &-container {
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: fit-content;
-            background-color: $white--0;
-            margin: 0 24px;
-            padding: 36px 0 22px 0;
-            border-radius: $border-radius--s;
-            @include mq-1920 {
-                width: 590px;
-                margin: auto;
-                padding: 50px 0 38px 0;
-            }
+    }
+    &-project-name {
+        font-size: $font--mob-s;
+        line-height: $line-h--1;
+        font-weight: $bold;
+        @include mq-1920 {
+            font-size: $font--desk-l;
         }
-        &-project-name {
-            font-size: $font--mob-s;
-            line-height: $line-h--1;
-            font-weight: $bold;
-            @include mq-1920 {
-                font-size: $font--desk-l;
-            }
+    }
+    &-separator {
+        margin: 24px 0;
+        padding: 0 21px;
+        fill: none;
+        stroke: $tertiary--0;
+        stroke-width: 1px;
+        @include mq-1920 {
+            padding: 0 45px;
         }
-        &-separator {
-            margin: 24px 0;
-            padding: 0 21px;
-            fill: none;
-            stroke: $tertiary--0;
-            stroke-width: 1px;
-            @include mq-1920 {
-                padding: 0 45px;
-            }
-        }
-        &-overlay {
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            background-color: $black--80;
-            // mix-blend-mode: multiply;
-        }
+    }
+    &-overlay {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: $black--80;
+        // mix-blend-mode: multiply;
+    }
 }
