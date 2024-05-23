@@ -6,7 +6,6 @@
     <title>Swiper Example</title>
     
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
 </head>
 <body>
     <article class="article">

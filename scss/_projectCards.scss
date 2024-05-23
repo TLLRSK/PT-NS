@@ -2,9 +2,9 @@
 @import './mixins';
 .project-card {
     /* Overriding swiper style */
-    width: 100% !important;
+    width: 100%;
     height: fit-content !important;
-    min-height: 313px !important;
+    min-height: 313px;
     /*--------------------------*/
     background-color: $white--0;
     outline: 1px solid $tertiary--40;
@@ -17,10 +17,10 @@
     }
 
     @include mq-480 {
-        width: clamp(313px, 25vw, 418px) !important;
+        width: clamp(313px, 25vw, 418px);
     }
     @include mq-1024 {
-        width: 428px;
+        width: 418px;
     }
 
     /* Card content */
