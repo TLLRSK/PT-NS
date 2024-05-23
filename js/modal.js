@@ -1,3 +1,4 @@
+
 const buttonsShowModal = document.querySelectorAll('.btn--project-info');
 const buttonBuy = document.querySelector('.btn--buy-project');
 
