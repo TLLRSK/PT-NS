@@ -1,5 +1,7 @@
 @import './variables';
 .btn {
+    cursor: pointer;
+    
     &--project-info, &--buy {
         background-color: $ultramar--100;
         padding: 8px 16px;

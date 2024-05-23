@@ -144,3 +144,11 @@ Swiper:
 - Por falta de tiempo y desconocimiento de la librería, opto por overridear el estilo de swiper con !important.
     *Sería conveniente depurar esto.
 
+Info button:
+- Guardar la id del proyecto en el dataset de cada elemento proyecto.
+- Al clicar llama a la función que muestra el modal usando la id del proyecto.
+- Timer que añade style="opacity: 1" para hacer fade in.
+- Al clicar en ¡Lo quiero! se llama a la función para cerrar el modal.
+    - Timer que añade style="opacity: 1" para hacer fade out
+    - Vaciar el texto del modal.
+    - Display: none.
