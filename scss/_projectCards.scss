@@ -1,7 +1,6 @@
 @import './variables';
 @import './mixins';
 .project-card {
-    /* Overriding swiper style */
     width: 100%;
     max-width: 313px;
     height: fit-content !important;
@@ -9,17 +8,25 @@
     outline: 1px solid $tertiary--40;
     border-radius: $border-radius--s;
 
-    /* Selected card */
-    &.swiper-slide-active {
+    &:hover, &.swiper-slide-active:hover {
         @include shadows;
     }
 
+    /* Active card */
+    &.swiper-slide-active {
+        @include shadows;
+
+        @include mq-720 {
+            box-shadow: none;
+        }
+    }
     @include mq-480 {
         width: clamp(313px, 12vw, 360px);
         max-width: none;
     }
     @include mq-1024 {
         width: clamp(360px, 28vw, 418px);
+        box-shadow: none;
     }
     @include mq-1920 {
         width: 418px;
@@ -45,11 +52,11 @@
                 pointer-events: none;
             }
             &.gradient--dark::after {
-                background: linear-gradient(132deg, rgba(76,51,38,1) 10%, rgba(217,217,217,0) 42%);
+                background: $gradient--dark;
                 mix-blend-mode: multiply;
             }
             &.gradient--light::after {
-                background: linear-gradient(132deg, rgba(255,255,255,1) 12%, rgba(255,255,255,0) 42%);
+                background: $gradient--light;
                 mix-blend-mode: normal;
             }
         }

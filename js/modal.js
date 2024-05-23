@@ -17,11 +17,9 @@ const showModal = (id) => {
             setTimeout(() => {
                 overlay.classList.add('fadeIn');
                 modalContainer.classList.contains('fadeOut')
-                && modalContainer.classList.remove('fadeOut')
-                || modalContainer.classList.add('fadeIn');
-            }, 500)
-        } else {
-            console.log(`Project ${id} not found`);
+                    && modalContainer.classList.remove('fadeOut')
+                    || modalContainer.classList.add('fadeIn');
+            }, 10)
         }
     };
 
@@ -36,7 +34,7 @@ const closeModal = () => {
         modalContainer.classList.remove('fadeOut');
         modal.style.display = 'none';
         modalProjectName.textContent = '';
-    }, 500);
+    }, 300);
 };
 
 // Buying project
@@ -46,6 +44,7 @@ const buyProject = (id) => {
 }
 
 // Adding listeners
+overlay.addEventListener('click', closeModal);
 buttonsShowModal.forEach((button) => {
     button.addEventListener('click', (e) => {
         const currentId = parseInt(e.target.dataset.id);
