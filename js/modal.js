@@ -16,9 +16,8 @@ const showModal = (id) => {
             modal.style.display = 'flex';
             setTimeout(() => {
                 overlay.classList.add('fadeIn');
-                modalContainer.classList.contains('fadeOut')
-                    && modalContainer.classList.remove('fadeOut')
-                    || modalContainer.classList.add('fadeIn');
+                modalContainer.classList.remove('fadeOut')
+                modalContainer.classList.add('fadeIn');
             }, 10)
         }
     };
