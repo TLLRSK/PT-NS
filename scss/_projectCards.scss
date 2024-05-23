@@ -32,8 +32,7 @@
             margin: 12.55px 13.30px 13.59px;
             
             @include mq-1920 {
-                padding: 17px 17.74px 0;
-                margin-bottom: 18px;
+                margin: 17px 17.74px 18px;
             }
             &::after {
                 content: "";

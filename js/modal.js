@@ -3,6 +3,8 @@
 const buttonsShowModal = document.querySelectorAll('.btn--project-info');
 const buttonBuy = document.querySelector('.btn--buy-project');
 const modal = document.querySelector('.modal');
+const modalContainer = document.querySelector('.modal-container');
+const overlay = document.querySelector('.modal-overlay');
 const modalProjectName = document.querySelector('.modal-project-name');
 
 // Showing modal
@@ -11,10 +13,13 @@ const showModal = (id) => {
         if (selectedProject) {
             buttonBuy.dataset.id = id;
             modalProjectName.textContent = selectedProject.name;
-           
-            modal.classList.contains('fadeOut')
-                && modal.classList.remove('fadeOut')
-                || modal.classList.add('fadeIn');
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                overlay.classList.add('fadeIn');
+                modalContainer.classList.contains('fadeOut')
+                && modalContainer.classList.remove('fadeOut')
+                || modalContainer.classList.add('fadeIn');
+            }, 500)
         } else {
             console.log(`Project ${id} not found`);
         }
@@ -22,10 +27,14 @@ const showModal = (id) => {
 
 // Closing modal
 const closeModal = () => {
-    modal.classList.remove('fadeIn');
-    modal.classList.add('fadeOut');
+    overlay.classList.remove('fadeIn');
+    modalContainer.classList.remove('fadeIn');
+    overlay.classList.add('fadeOut');
+    modalContainer.classList.add('fadeOut');
     setTimeout(() => {
-        modal.classList.remove('fadeOut');
+        overlay.classList.remove('fadeOut');
+        modalContainer.classList.remove('fadeOut');
+        modal.style.display = 'none';
         modalProjectName.textContent = '';
     }, 500);
 };
