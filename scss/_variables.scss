@@ -11,9 +11,9 @@ $black--0: #000000;
 $black--80: #4C4C4C;
 $black--90: #1A1E32;
 $black--100: #00051A;
-// WIDTH
 
-// HEIGHT
+// PADDING
+//article
 $padding--article-s: 100px 32px 0;
 $padding--article-m: 120px 90px 0;
 
@@ -21,6 +21,7 @@ $padding--article-m: 120px 90px 0;
 $border-radius--s: 8px;
 
 // FONTS
+
 //size
 $font--mob-xs: 14px;
 $font--mob-s: 18px;
@@ -33,11 +34,12 @@ $font--desk-m: 22px;
 $font--desk-l: 26px;
 $font--desk-xl: 30px;
 $font--desk-2xl: 30.03px;
+
 //weight
 $bold: 700;
 $semibold: 600;
 
-// Line height //
+//line height
 $line-h--1: 100%;
 $line-h---xxs: 16.1px;
 $line-h--xs: 19.3px;
@@ -46,5 +48,3 @@ $line-h---m: 22.2px;
 $line-h---l: 24px;
 $line-h--xl: 30px;
 $line-h--xxl: 41px;
-
-// SVGs
