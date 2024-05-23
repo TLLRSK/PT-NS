@@ -4,7 +4,7 @@
 body {
     background-color: $gray--0;
 }
-.article {
+.section {
     height: 100dvh;
     background-color: $white--0;
     padding: $padding--article-s;
@@ -29,6 +29,8 @@ body {
             margin: 0 clamp(24px, 8vw, 162px);
         }
         @include mq-1024 {
+            font-size: $font--desk-m;
+            line-height: $line-h--xl;
             margin: 0 clamp(120px, 8vw, 162px);
         }
         @include mq-1920 {

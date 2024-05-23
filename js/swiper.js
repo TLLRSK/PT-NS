@@ -15,5 +15,3 @@ var swiper = new Swiper('.swiper', {
         clickable: true,
     },
 });
-
-export default swiper;

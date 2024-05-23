@@ -1,11 +1,4 @@
-
-// Selectors
-const buttonsShowModal = document.querySelectorAll('.btn--project-info');
-const buttonBuy = document.querySelector('.btn--buy-project');
-const modal = document.querySelector('.modal');
-const modalContainer = document.querySelector('.modal-container');
-const overlay = document.querySelector('.modal-overlay');
-const modalProjectName = document.querySelector('.modal-project-name');
+import { buttonBuy, buttonsShowModal, modal, modalContainer, modalProjectName, overlay } from "./index.js";
 
 // Showing modal
 const showModal = (id) => {
@@ -19,6 +12,8 @@ const showModal = (id) => {
                 modalContainer.classList.remove('fadeOut')
                 modalContainer.classList.add('fadeIn');
             }, 10)
+        } else {
+            console.log(`Project ${id} not found`);
         }
     };
 
@@ -38,16 +33,24 @@ const closeModal = () => {
 
 // Buying project
 const buyProject = (id) => {
-    console.log("buying project: ", projectsData[id])
+    const 
+        currentId = parseInt(id),
+        selectedProject = projectsData.find((project) => project.id === currentId);
+    console.log("Proyecto seleccionado: ", selectedProject)
+
     closeModal();
 }
 
-// Adding listeners
+// AddEventListeners
 overlay.addEventListener('click', closeModal);
+
 buttonsShowModal.forEach((button) => {
     button.addEventListener('click', (e) => {
         const currentId = parseInt(e.target.dataset.id);
         showModal(currentId);
     })
 })
-buttonBuy.addEventListener('click', (e) => buyProject(e.target.dataset.id));
+
+buttonBuy.addEventListener('click', (e) => {
+    buyProject(e.target.dataset.id)
+});
