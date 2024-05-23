@@ -3,6 +3,9 @@ var swiper = new Swiper('.swiper', {
     slidesPerView: 'auto',
     autoHeight: false,
     breakpoints: {
+        480: {
+            spaceBetween: 17,
+        },
         1024: {
             spaceBetween: 20,
         },

@@ -10,21 +10,27 @@ body {
     padding: $padding--article-s;
     width: 100%;
     overflow: hidden;
+
     @include mq-720 {
-        
+        width: clamp(720px, 80vw, 1280px);
         margin: auto;
     }
-    @include mq-1024 {
+    @include mq-1920 {
         width: 1440px;
         padding: $padding--article-m;
     }
-
     &-header {
         text-align: center;
         font-size: $font--mob-s;
         line-height: $line-h---l;
         font-weight: $bold;
 
+        @include mq-720 {
+            margin: 0 clamp(24px, 8vw, 162px);
+        }
+        @include mq-1024 {
+            margin: 0 clamp(120px, 8vw, 162px);
+        }
         @include mq-1920 {
             font-size: $font--desk-xl;
             line-height: $line-h--xxl;
