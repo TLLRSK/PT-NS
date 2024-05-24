@@ -28,7 +28,7 @@
         padding: 0;
     }
 }
-@mixin projectGradients {
+@mixin imageGradients {
     &::after {
         content: "";
         position: absolute;

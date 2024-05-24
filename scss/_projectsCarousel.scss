@@ -49,6 +49,7 @@
             @include mq-1920 {
                 margin: 17px 17.74px 18px;
             }
+            @include imageGradients;
         }
         &-image {
             height: auto;
