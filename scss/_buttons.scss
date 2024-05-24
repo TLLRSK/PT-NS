@@ -17,6 +17,11 @@
         margin-bottom: 24px;
         transition: background-color .2s ease-in-out;
 
+        @include mq-720 {
+            font-size: clamp($font--mob-xs, 3vw, $font--desk-xs);
+            line-height: $line-h--xs;
+        }
+
         @include mq-1920 {
             width: 163.64px;
             height: 45px;

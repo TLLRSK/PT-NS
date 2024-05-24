@@ -8,6 +8,7 @@
             ?>
             
             <div class="project-card swiper-slide" style="height:320px">
+            
                 <div class="project-image-container gradient--<?php echo $project['gradient']?>">
                     <img class="project-image" src="<?php echo $project['image'] ?>" alt="<?php echo $project['name'] ?>">
                 </div>
@@ -22,6 +23,7 @@
                     <button class="btn btn--project-info" data-id="<?php echo $project['id']; ?>">
                         Más info
                     </button>
+
                 </div>
             </div>
         <?php endforeach; ?>

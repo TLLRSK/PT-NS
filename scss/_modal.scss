@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: center;
     inset: 0 0 0 0;
-   
     
     &-container {
         z-index: 3;
@@ -26,9 +25,11 @@
             width: clamp(360px, 42vw, 480px);
             margin: auto;
         }
+        @include mq-1024 {
+            width: clamp(360px, 42vw, 420px);
+        }
         @include mq-1920 {
             width: 590px;
-            margin: auto;
             padding: 50px 0 38px 0;
         }
     }
