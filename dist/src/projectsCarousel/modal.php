@@ -1,5 +1,5 @@
 <div class="modal">
-    <div class="modal-overlay"></div>
+    <div class="modal-multiply"></div>
 
     <div class="modal-container">
         <h3 class="modal-project-name">Project name</h3>

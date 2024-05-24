@@ -4,5 +4,5 @@ export const
     buttonBuy = document.querySelector('.btn--buy-project'),
     modal = document.querySelector('.modal'),
     modalContainer = document.querySelector('.modal-container'),
-    overlay = document.querySelector('.modal-overlay'),
+    multiply = document.querySelector('.modal-multiply'),
     modalProjectName = document.querySelector('.modal-project-name')

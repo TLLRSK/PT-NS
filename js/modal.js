@@ -1,4 +1,4 @@
-import { buttonBuy, buttonsProjectInfo, modal, modalContainer, modalProjectName, overlay } from "./index.js";
+import { buttonBuy, buttonsProjectInfo, modal, modalContainer, modalProjectName, multiply } from "./index.js";
 
 // Showing modal
 const showModal = (id) => {
@@ -8,7 +8,7 @@ const showModal = (id) => {
             modalProjectName.textContent = selectedProject.name;
             modal.style.display = 'flex';
             setTimeout(() => {
-                overlay.classList.add('fadeIn');
+                multiply.classList.add('fadeIn');
                 modalContainer.classList.remove('fadeOut')
                 modalContainer.classList.add('fadeIn');
             }, 10)
@@ -19,12 +19,12 @@ const showModal = (id) => {
 
 // Closing modal
 const closeModal = () => {
-    overlay.classList.remove('fadeIn');
+    multiply.classList.remove('fadeIn');
     modalContainer.classList.remove('fadeIn');
-    overlay.classList.add('fadeOut');
+    multiply.classList.add('fadeOut');
     modalContainer.classList.add('fadeOut');
     setTimeout(() => {
-        overlay.classList.remove('fadeOut');
+        multiply.classList.remove('fadeOut');
         modalContainer.classList.remove('fadeOut');
         modal.style.display = 'none';
         modalProjectName.textContent = '';
@@ -42,7 +42,7 @@ const buyProject = (id) => {
 }
 
 // AddEventListeners
-overlay.addEventListener('click', closeModal);
+multiply.addEventListener('click', closeModal);
 
 buttonsProjectInfo.forEach((button) => {
     button.addEventListener('click', (e) => {

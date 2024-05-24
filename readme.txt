@@ -1,154 +1,84 @@
-Requerimiento
+*********************
+WEVAI - Prueba técnica
+por Pedro Gil
+***********************
+
+REQUERIMIENTO
 
 Desarrollar el módulo de la derecha, tanto en desktop como mobile, utilizando únicamente PHP, SCSS/CSS y JS.
 
 Respetar las distancias, tamaños y pesos de texto, colores y demás detalles
-Exportar las imágenes directamente desde este Figma
-Usar fuente Montserrat [https://fonts.google.com/specimen/Montserrat]
-El módulo debe estar contenido en una caja de 1440px de ancho máximo
-Usar la librería Swiper [https://swiperjs.com/get-started#use-swiper-from-cdn]
-Añadir efecto de hover a los bloques como se muestra en el primero
-Al hacer click en “Más información” en cualquier bloque:
-Debe aparecer la modal de abajo con un efecto de fade-in
-La modal debe contener el título del bloque clickado
-La modal debe desaparecer al clickar en el fondo oscurecido o en “Lo quiero” con un efecto de fade-out
+- Exportar las imágenes directamente desde este Figma
+- Usar fuente Montserrat [https://fonts.google.com/specimen/Montserrat]
+- El módulo debe estar contenido en una caja de 1440px de ancho máximo
+- Usar la librería Swiper [https://swiperjs.com/get-started#use-swiper-from-cdn]
+- Añadir efecto de hover a los bloques como se muestra en el primero
+- Al hacer click en “Más información” en cualquier bloque:
+    - Debe aparecer la modal de abajo con un efecto de fade-in
+    - La modal debe contener el título del bloque clickado
+    - La modal debe desaparecer al clickar en el fondo oscurecido o en “Lo quiero” con un efecto de fade-out
 
 
-Se valorará positivamente
+/*  PLANTEAMIENTO */
 
-Uso de lógica PHP (bucles, funciones, etc)
-Código limpio, comprensible y bien indentado
+Estructura de carpetas y archivos favoreciendo la separación de funciones, componentes y demás 
+con la idea de favorecer su reutilización y la escalabilidad del proyecto, simulando que este componente
+forma parte de un proyecto más amplio.
 
+El proyecto ha sidp desarrollo utilizando Visual Studio Code, con un servidor local configurado
+mediante el comando php -S localhost:8000, permitiendo probar y desarrollar la aplicación web antes de llevarlo a producción.
 
-Modo de entrega
+ 
+/* DESARROLLO */
+1. Trasladar info del diseño y convertirla en variables (tamaños, colores, etc).
 
-Se entregará un fichero ZIP. Este fichero debe contener todos los archivos necesarios (estilos, imágenes, JS, etc) y un archivo “index.php” que renderize el contenido del ejercicio.
+2. Desarrollar partes del componente.
 
+    /* SWIPER */
 
-¿Dudas?
+    - Instalar librería. ✔
 
-Escribirme directamente a victor.navarro@thenorthstudio.com
+    - Loop para generar las tarjetas de proyecto como sliders. ✔
 
+        Nota: Por falta de tiempo y desconocimiento de la librería, opto por overridear el estilo de swiper con !important. 🔨
 
-/********************/
-Pre:
- - Guardar las imágenes
- - Instalar fuente Montserrat
- - Instalar swiper
+    - Swiper customizado en mayor parte. Overrideando swiper slide height. ✔
 
-1. Crear index.js con los proyectos
+    /* MODAL */
+    - Modal consiste en:
+        - Modal container con la información del proyecto y el botón de compra. ✔
+        - Modal multiply. ✔
 
-2. Crear variables
+    - Animación que permita hacer fade in y fade out. ✔
+        Nota: conflicto entre propiedad display y opacity. 
+            Solucionado usando setTimeOut. ✔
 
-    // COLORS
-    --black-100: #00051A;
-    --black-90: #1A1E32;
-    --white-0: #FFFFFF;
-    --white-100: #FBFBFC;
-    --tertiary-40: #F0F1F4;
-    --ultramar-0: #A1AED6;
-    --ultramar-100: #133599;
-    --brown--100: #4C3326;
+        Nota: conflicto entre transiciones, opacidad y mix-blend-mode de los distintos elementos del modal. 
+            Solucionado separando la adición y eliminación de clases. ✔
 
-    Linear gradient: -41deg;
+    - Función para dar formato al precio, separando entero y decimal para aplicarles diferentes tamaños. ✔
+        functions.php > formatPrice()
 
-    // SIZES
+    /* BUTTONS */
 
-    * MAIN *
-    --max-w-main--s: 100%;
-    --max-w-main--m: 1440px;
+    INFO BTN:
+    - Cambiar contenido de botones según resolución. ✔
+        buttons.js > updateButtonText();
 
-    --max-w-header-s: 100%;
-    --max-w-header-m: 937px;
-   
-    * PROJECT CARD *
-    --w-card-project--s: 313px;
-    --w-card-project--m: 418px;
+    - Guardar la id del proyecto en el dataset de cada elemento proyecto. ✔
 
-    --h-card-project--s: 396px;
-    --h-card-project--s: 521px;
-
-    * IMG *
-    --w-img-project-s: 286.36px; 
-    --h-img-project-s: 239.86px; 
-
-    * BUTTON INFO *
-    --w-btn-info--m: 163.64px;
-    --h-card-project--s: 40px;
-    --h-card-project--s: 45px;
-
-    * MODAL *
-    --w-modal--s: 328px;
-    --h-modal--s: 168px;
-    --w-modal--m: 590px;
-    --h-modal--m: 225px;
+    - Al clicar llama a la función que muestra el modal usando la id del proyecto. ✔
 
     
-    // PADDINGS
-    * Main *
-    --p-main--s: 100px 32px;
-    --p-main--m: 120px 90px auto 90px;
 
-    --p-img-project--s: 13.30px;
-    --p-data-project--s: 19px;
-    --p-data-project--m: 25.50px;
-    --p-btn-info--s: 8px 16px;
-    --p-btn-info--m: 81.22px 16.08px;
-
-    // MARGINS
-    * PROJECT CARD *
-    --margin-card-project--s: 34px;
-    --margin-card-project--m: 48px;
-
-    // GAPS
-    --gap--s: 15px;
-    --gap--m: 20px;
-
-    // BORDERS
-    --border-tertiary: 1px solid var(--tertiary-40);
-    --rounded-8: 8px;
-
-    // SHADOWS
-    1. 
-        color: #000000;
-        opacity: 5%;
-        y = 4px;
-        blur = 6px;
-    2. 
-        color: #000000;
-        opacity: 10%;
-        y = 0;px;
-        blur: 15px;
-
-2. Crear componentes
-    - Proyecto
-        - Img
-        - Nombre
-        - Precio
-        - Botón más info
-        - Hover: sombra 
-        
-
-    - Botón más info
-        - Muestra modal con nombre del Proyecto
-    - Modal
-        - Overlay negro
-        - Se muestra en fade-in
-        - Desaparece con fade-out
+    BUY BTN:
+    - Al clicar en ¡Lo quiero! se llama a la función para comprar y cerrar el modal. ✔
+        - Añadir clase fade out. ✔
+        - Vaciar el texto del modal. ✔
+        - Borrar clase fade out. ✔
+        - Cambiar el atributo style del modal a none. ✔
     
-// Desarrollando //
 
-Swiper:
-- Librería instalada.
-- Creado loop para generar las tarjetas de proyecto como sliders.
-- Por falta de tiempo y desconocimiento de la librería, opto por overridear el estilo de swiper con !important.
-    *Sería conveniente depurar esto.
+    Nota: Añadido hover style por decisión propia para mejorar UX.
 
-Info button:
-- Guardar la id del proyecto en el dataset de cada elemento proyecto.
-- Al clicar llama a la función que muestra el modal usando la id del proyecto.
-- Timer que añade style="opacity: 1" para hacer fade in.
-- Al clicar en ¡Lo quiero! se llama a la función para cerrar el modal.
-    - Timer que añade style="opacity: 1" para hacer fade out
-    - Vaciar el texto del modal.
-    - Display: none.
+    
