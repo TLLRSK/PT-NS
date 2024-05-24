@@ -1,5 +1,11 @@
 @import './variables';
 @import './mixins';
+
+/* Carousel */
+.project-carousel {
+    margin-top: 34px;
+}
+/* Cards */
 .project-card {
     width: 100%;
     max-width: 313px;
@@ -8,18 +14,19 @@
     outline: 1px solid $tertiary--40;
     border-radius: $border-radius--s;
 
-    &:hover, &.swiper-slide-active:hover {
-        @include shadows;
+    &:hover,
+    &.swiper-slide-active,
+    &.swiper-slide-active:hover {
+        box-shadow: $shadow--project-card;
+        transition: box-shadow 0.2s ease-in-out;
     }
-
-    /* Active card */
+ 
     &.swiper-slide-active {
-        @include shadows;
-
         @include mq-720 {
             box-shadow: none;
         }
     }
+
     @include mq-480 {
         width: clamp(313px, 12vw, 360px);
         max-width: none;
@@ -40,24 +47,6 @@
             
             @include mq-1920 {
                 margin: 17px 17.74px 18px;
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 67%;
-                pointer-events: none;
-            }
-            &.gradient--dark::after {
-                background: $gradient--dark;
-                mix-blend-mode: multiply;
-            }
-            &.gradient--light::after {
-                background: $gradient--light;
-                mix-blend-mode: normal;
             }
         }
         &-image {
@@ -83,6 +72,7 @@
                 margin-bottom: 13px;
             }
         }
+        // Medium size price text
         &-price {
             font-size: $font--mob-m;
             line-height: $line-h---m;
@@ -94,6 +84,7 @@
                 margin-bottom: 16px;
             }
         }
+        // Small size price text
         &-price--s {
             font-size: $font--mob-xs;
             line-height: $line-h---xxs;

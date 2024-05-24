@@ -1,4 +1,4 @@
-import { buttonBuy, buttonsShowModal, modal, modalContainer, modalProjectName, overlay } from "./index.js";
+import { buttonBuy, buttonsProjectInfo, modal, modalContainer, modalProjectName, overlay } from "./index.js";
 
 // Showing modal
 const showModal = (id) => {
@@ -44,7 +44,7 @@ const buyProject = (id) => {
 // AddEventListeners
 overlay.addEventListener('click', closeModal);
 
-buttonsShowModal.forEach((button) => {
+buttonsProjectInfo.forEach((button) => {
     button.addEventListener('click', (e) => {
         const currentId = parseInt(e.target.dataset.id);
         showModal(currentId);

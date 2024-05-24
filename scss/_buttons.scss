@@ -1,8 +1,11 @@
 @import './variables';
+@import './mixins';
+
 .btn {
     cursor: pointer;
 
-    &--project-info, &--buy-project {
+    &--project-info,
+    &--buy-project {
         background-color: $ultramar--100;
         padding: 8px 16px;
         border-radius: $border-radius--s;
@@ -13,8 +16,6 @@
         text-transform: uppercase;
         margin-bottom: 24px;
 
-        
-
         @include mq-1920 {
             width: 163.64px;
             height: 45px;
@@ -23,7 +24,10 @@
             margin-bottom: 29px;
         }
     }
-    &--buy {
+    &--project-info {
+        content: "Más info";
+    }
+    &--buy-project {
         margin: 0 auto;
     }
 }

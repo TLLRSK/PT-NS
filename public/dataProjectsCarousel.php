@@ -1,4 +1,6 @@
 <?php
+    $HEADER = "Escoge tu proyecto ideal y fináncialo en cómodas cuotas. Diferentes importes, mismos servicios incluidos";
+    
     $PROJECTS = [
         [
             'id' => 0,
@@ -29,4 +31,5 @@
             'price' => '145,60'
         ],
     ];
+    
 ?>
