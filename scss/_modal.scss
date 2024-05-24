@@ -34,7 +34,7 @@
     }
     &-project-name {
         font-size: $font--mob-s;
-        line-height: $line-h--1;
+        line-height: $line-h--auto;
         font-weight: $bold;
         @include mq-1920 {
             font-size: $font--desk-l;

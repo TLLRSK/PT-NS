@@ -69,7 +69,7 @@
             margin-bottom: 7.22px;
              @include mq-1920 {
                 font-size: $font--desk-m;
-                line-height: $line-h--1;
+                line-height: $line-h--auto;
                 margin-bottom: 13px;
             }
         }
