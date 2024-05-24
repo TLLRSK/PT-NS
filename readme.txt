@@ -1,7 +1,11 @@
-*********************
+********************************************
+
 WEVAI - Prueba técnica
 por Pedro Gil
-***********************
+
+Github repository: https://github.com/TLLRSK/PT-NS
+
+**********************************************
 
 REQUERIMIENTO
 
