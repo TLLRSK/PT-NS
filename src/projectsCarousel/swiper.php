@@ -1,4 +1,4 @@
-<?php require_once 'functions.php'; ?>
+<?php require_once 'src/functions.php'; ?>
 
 <div class="swiper">
     <div class="swiper-wrapper project-carousel">

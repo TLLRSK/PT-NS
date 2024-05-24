@@ -48,6 +48,16 @@
         mix-blend-mode: normal;
     }
 }
+@mixin fadeAnimation {
+    opacity: 0;
+    &.fadeIn {
+        animation: fadeIn .3s ease-in-out;
+        opacity: 1;
+    }
+    &.fadeOut {
+        animation: fadeOut .3s ease-in-out;
+    }
+}
 @mixin mq-480 {
     @media all and (min-width: 480px) { @content; }
 }

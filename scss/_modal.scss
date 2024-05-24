@@ -7,9 +7,9 @@
     align-items: center;
     justify-content: center;
     inset: 0 0 0 0;
+   
     
     &-container {
-       
         z-index: 3;
         display: flex;
         flex-direction: column;
@@ -21,15 +21,6 @@
         margin: 0 24px;
         padding: 36px 0 22px 0;
         border-radius: $border-radius--s;
-        opacity: 0;
-        transition: opacity .4s ease-in-out;
-
-        &.fadeIn {
-            opacity: 1;
-        }
-        &.fadeOut {
-            opacity: 0;
-        }
 
         @include mq-480 {
             width: clamp(360px, 42vw, 480px);
@@ -64,11 +55,11 @@
         inset: 0 0 0 0;
         background-color: $black--80;
         opacity: 0;
-        transition: opacity .4s ease-in-out;
         mix-blend-mode: multiply;
-
-        &.fadeIn {
-            opacity: 1;
-        }
+    }
+    
+    &-container,
+    &-overlay {
+        @include fadeAnimation;
     }
 }
