@@ -4,7 +4,7 @@
 body {
     background-color: $gray--0;
 }
-.section {
+section {
     width: 100%;
     height: 100dvh;
     background-color: $white--0;
@@ -18,25 +18,5 @@ body {
     @include mq-1920 {
         width: 1440px;
         padding: $padding--article-m;
-    }
-    &-header {
-        text-align: center;
-        font-size: $font--mob-s;
-        line-height: $line-h---l;
-        font-weight: $bold;
-
-        @include mq-720 {
-            margin: 0 clamp(24px, 8vw, 162px);
-        }
-        @include mq-1024 {
-            font-size: $font--desk-m;
-            line-height: $line-h--xl;
-            margin: 0 clamp(120px, 8vw, 162px);
-        }
-        @include mq-1920 {
-            font-size: $font--desk-xl;
-            line-height: $line-h--xxl;
-            margin: 0 162px;
-        }
     }
 }

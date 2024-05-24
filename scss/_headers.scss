@@ -1,0 +1,23 @@
+@import './variables';
+@import './mixins';
+
+.header {
+    text-align: center;
+    font-size: clamp($font--mob-s, 3vw, $font--mob-m);
+    line-height: $line-h---l;
+    font-weight: $bold;
+
+    @include mq-720 {
+        margin: 0 clamp(20px, 4vw, 162px);
+    }
+    @include mq-1024 {
+        font-size: clamp($font--mob-m, 2vw, $font--desk-xl);
+        line-height: clamp($line-h--xl, 2vw, $line-h--xxl);
+        margin: 0 clamp(48px, 8vw, 162px);
+    }
+    @include mq-1920 {
+        font-size: $font--desk-xl;
+        line-height: $line-h--xxl;
+        margin: 0 162px;
+    }
+}

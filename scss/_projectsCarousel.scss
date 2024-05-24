@@ -17,10 +17,11 @@
     &:hover,
     &.swiper-slide-active,
     &.swiper-slide-active:hover {
+        cursor: grab;
         box-shadow: $shadow--project-card;
         transition: box-shadow 0.2s ease-in-out;
     }
- 
+    
     &.swiper-slide-active {
         @include mq-720 {
             box-shadow: none;

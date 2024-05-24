@@ -15,6 +15,7 @@
         font-weight: $bold;
         text-transform: uppercase;
         margin-bottom: 24px;
+        transition: background-color .2s ease-in-out;
 
         @include mq-1920 {
             width: 163.64px;
@@ -22,6 +23,10 @@
             font-size: $font--desk-xs;
             line-height: $line-h--xs;
             margin-bottom: 29px;
+        }
+
+        &:hover {
+            background-color: $ultramar--200;
         }
     }
     &--project-info {
