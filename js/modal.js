@@ -28,7 +28,7 @@ const closeModal = () => {
         modalContainer.classList.remove('fadeOut');
         modal.style.display = 'none';
         modalProjectName.textContent = '';
-    }, 300); /* Adjust transition time in modal.scss*/
+    }, 300); /* Adjust transition time in fadeAnimation mixin defined on mixins.scss */
 };
 
 // Buying project
