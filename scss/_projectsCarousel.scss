@@ -13,11 +13,11 @@
     background-color: $white--0;
     outline: 1px solid $tertiary--40;
     border-radius: $border-radius--s;
+    cursor: grab;
 
     &:hover,
     &.swiper-slide-active,
     &.swiper-slide-active:hover {
-        cursor: grab;
         box-shadow: $shadow--project-card;
         transition: box-shadow 0.2s ease-in-out;
     }

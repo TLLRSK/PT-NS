@@ -21,7 +21,7 @@
                     </p>
 
                     <button class="btn btn--project-info" data-id="<?php echo $project['id']; ?>">
-                        Más info
+                        <!-- Button content defined in ·Project info btn· at variables.scss -->
                     </button>
 
                 </div>

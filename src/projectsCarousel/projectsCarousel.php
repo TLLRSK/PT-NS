@@ -15,4 +15,3 @@
 <script>
     const projectsData = <?php echo json_encode($PROJECTS); ?>;       
 </script>
-<script type="module" src="./js/buttons.js"></script>
