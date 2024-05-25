@@ -3,9 +3,7 @@
 <div class="swiper">
     <div class="swiper-wrapper project-carousel">
         <?php foreach ($PROJECTS as $project):?>
-            <?php
-                $price_parts = formatPrice($project['price']);
-            ?>
+            <?php $price_parts = formatPrice($project['price']);?>
             
             <div class="project-card swiper-slide" style="height:320px">
             
