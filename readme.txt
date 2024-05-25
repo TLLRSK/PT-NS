@@ -1,28 +1,3 @@
-********************************************
-
-WEVAI - Prueba técnica
-por Pedro Gil
-
-Github repository: https://github.com/TLLRSK/PT-NS
-
-**********************************************
-
-REQUERIMIENTO
-
-Desarrollar el módulo de la derecha, tanto en desktop como mobile, utilizando únicamente PHP, SCSS/CSS y JS.
-
-Respetar las distancias, tamaños y pesos de texto, colores y demás detalles
-- Exportar las imágenes directamente desde este Figma
-- Usar fuente Montserrat [https://fonts.google.com/specimen/Montserrat]
-- El módulo debe estar contenido en una caja de 1440px de ancho máximo
-- Usar la librería Swiper [https://swiperjs.com/get-started#use-swiper-from-cdn]
-- Añadir efecto de hover a los bloques como se muestra en el primero
-- Al hacer click en “Más información” en cualquier bloque:
-    - Debe aparecer la modal de abajo con un efecto de fade-in
-    - La modal debe contener el título del bloque clickado
-    - La modal debe desaparecer al clickar en el fondo oscurecido o en “Lo quiero” con un efecto de fade-out
-
-
 /*  PLANTEAMIENTO */
 
 Estructura de carpetas y archivos favoreciendo la separación de funciones, componentes y demás 
