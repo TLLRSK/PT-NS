@@ -74,7 +74,10 @@ Scss con Prepros.
 
     INFO BTN:
     - Cambiar contenido de botones según resolución. ✔
-        Ubicación: buttons.js > updateButtonText();
+        Ubicación: buttons.js > updateButtonText(); (Cambiado)
+
+        Update: Manejo por css para reducir código y consumo de recursos.
+            Ubicación: Project info btn > buttons.scss
 
 
     BUY BTN:
