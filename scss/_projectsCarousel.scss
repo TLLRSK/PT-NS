@@ -29,11 +29,11 @@
     }
 
     @include mq-480 {
-        width: clamp(313px, 12vw, 360px);
+        width: 313px;
         max-width: none;
     }
     @include mq-1024 {
-        width: clamp(360px, 28vw, 418px);
+        width: 360px;
         box-shadow: none;
     }
     @include mq-1920 {
