@@ -34,4 +34,3 @@
 
 <script src="node_modules/swiper/swiper-bundle.min.js"></script>
 <script type="module" src="./js/swiper.js"></script>
-<script type="module" src="./js/buttons.js"></script>

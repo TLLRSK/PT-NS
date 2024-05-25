@@ -1,5 +1,4 @@
-<?php include './public/dataProjectsCarousel.php'; ?>
-
+<?php include_once './public/dataProjectsCarousel.php'; ?>
 
 <section class="section">
     
@@ -16,3 +15,4 @@
 <script>
     const projectsData = <?php echo json_encode($PROJECTS); ?>;       
 </script>
+<script type="module" src="./js/buttons.js"></script>

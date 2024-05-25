@@ -30,7 +30,9 @@ con la idea de favorecer su reutilización y la escalabilidad del proyecto, simu
 forma parte de un proyecto más amplio.
 
 El proyecto ha sidp desarrollo utilizando Visual Studio Code, con un servidor local configurado
-mediante el comando php -S localhost:8000, permitiendo probar y desarrollar la aplicación web antes de llevarlo a producción.
+mediante el comando php -S localhost:8000, permitiendo probar y desarrollar cómodamente antes de llevarla a producción.
+
+Scss con Prepros.
 
  
 /* DESARROLLO */
@@ -104,8 +106,8 @@ mediante el comando php -S localhost:8000, permitiendo probar y desarrollar la a
     Al clicar en ¡Lo quiero! se llama a la función para comprar y cerrar el modal. ✔
 
     - Función para:
-        - Mostrar producto seleccionado
-        - Cerrar modal
+        - Mostrar producto seleccionado ✔
+        - Cerrar modal ✔
 
         Ubicación: modal.js > buyProject();
 

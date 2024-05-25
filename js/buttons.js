@@ -1,4 +1,4 @@
-import { buttonsProjectInfo } from './index.js';
+import { buttonBuy, buttonsProjectInfo } from './index.js';
 
 // Updating button content
 const updateButtonText = () => {
@@ -22,5 +22,18 @@ const updateButtonText = () => {
 // Updating on first render
 updateButtonText();
 
+
 // Add Event Listener
 window.addEventListener('resize', updateButtonText);
+
+
+buttonsProjectInfo.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const currentId = parseInt(e.target.dataset.id);
+        showModal(currentId);
+    })
+})
+
+buttonBuy.addEventListener('click', (e) => {
+    buyProject(e.target.dataset.id)
+});

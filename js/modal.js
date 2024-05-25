@@ -1,4 +1,4 @@
-import { buttonBuy, buttonsProjectInfo, modal, modalContainer, modalProjectName, multiply } from "./index.js";
+import { buttonBuy, buttonsProjectInfo, modal, modalContainer, modalProjectName, modalMultiply } from "./index.js";
 
 // Showing modal
 const showModal = (id) => {
@@ -8,8 +8,7 @@ const showModal = (id) => {
             modalProjectName.textContent = selectedProject.name;
             modal.style.display = 'flex';
             setTimeout(() => {
-                multiply.classList.add('fadeIn');
-                modalContainer.classList.remove('fadeOut')
+                modalMultiply.classList.add('fadeIn');
                 modalContainer.classList.add('fadeIn');
             }, 10)
         } else {
@@ -19,16 +18,16 @@ const showModal = (id) => {
 
 // Closing modal
 const closeModal = () => {
-    multiply.classList.remove('fadeIn');
+    modalMultiply.classList.remove('fadeIn');
     modalContainer.classList.remove('fadeIn');
-    multiply.classList.add('fadeOut');
+    modalMultiply.classList.add('fadeOut');
     modalContainer.classList.add('fadeOut');
     setTimeout(() => {
-        multiply.classList.remove('fadeOut');
+        modalMultiply.classList.remove('fadeOut');
         modalContainer.classList.remove('fadeOut');
         modal.style.display = 'none';
         modalProjectName.textContent = '';
-    }, 300); /* Adjust transition time in fadeAnimation mixin defined on mixins.scss */
+    }, 300); // Adjust transition time in fadeAnimation mixin defined on mixins.scss
 };
 
 // Buying project
@@ -36,13 +35,14 @@ const buyProject = (id) => {
     const 
         currentId = parseInt(id),
         selectedProject = projectsData.find((project) => project.id === currentId);
+        
     console.log("Proyecto seleccionado: ", selectedProject)
 
     closeModal();
 }
 
 // AddEventListeners
-multiply.addEventListener('click', closeModal);
+modalMultiply.addEventListener('click', closeModal);
 
 buttonsProjectInfo.forEach((button) => {
     button.addEventListener('click', (e) => {
